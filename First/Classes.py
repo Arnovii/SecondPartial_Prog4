@@ -77,10 +77,10 @@ class Pacient(Person):
             return False
         
     def validateGender(self, gender):
-        if gender == "M":
-            return gender
+        if gender == self.get_gender():
+            return True 
         else:
-            return "H"
+            return False 
 
     def save_info(self):
         with open(fileTextPath, "a") as file:
@@ -88,7 +88,6 @@ class Pacient(Person):
             file.write(f"firstConsultationDate: {self.get_firstConsultationDate()}\n")
             file.write(f"treatingDoctor: {self.get_treatingDoctor()}\n")
             
-
 class Medic(Person):
     def __init__(self, name, age, RUT, gender, wigth, higth, priceConsult, especiality):
         super().__init__(name, age, RUT, gender, wigth, higth)
@@ -108,13 +107,3 @@ class Medic(Person):
             file.write(f"priceConsult: {self.get_priceConsult()}\n")
             file.write(f"especiality: {self.get_especiality()}\n")
 
-
-person1 = Person("Juan", 20, "12345678-9", "M", 70, 1.80)
-person1.save_info()
-
-
-patient1 = Pacient("Juan", 20, "12345678-9", "M", 70, 1.80, "01/01/2021", "Dr. Juan")
-patient1.save_info()
-
-medic1 = Medic("Juan", 20, "12345678-9", "M", 70, 1.80, 10000, "Nutrition")
-medic1.save_info()

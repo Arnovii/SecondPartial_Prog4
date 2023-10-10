@@ -1,28 +1,20 @@
 |-------------------------------------------|
-name: Juan
-type: Person
-age: 20
-RUT: 12345678-9
-gender: M
-wigth: 70
-higth: 1.8
-|-------------------------------------------|
-name: Juan
-type: Pacient
-age: 20
-RUT: 12345678-9
-gender: M
-wigth: 70
-higth: 1.8
-firstConsultationDate: 01/01/2021
-treatingDoctor: Dr. Juan
-|-------------------------------------------|
-name: Juan
+name: Mateo
 type: Medic
 age: 20
-RUT: 12345678-9
-gender: M
-wigth: 70
-higth: 1.8
-priceConsult: 10000
-especiality: Nutrition
+RUT: 123
+gender: H
+wigth: 70.0
+higth: 1.75
+priceConsult: 4000.0
+especiality: nutrition
+|-------------------------------------------|
+name: Arnovi
+type: Pacient
+age: 20
+RUT: 456
+gender: H
+wigth: 60.0
+higth: 1.65
+firstConsultationDate: 20/01/2020
+treatingDoctor: Mateo
