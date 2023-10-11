@@ -15,7 +15,11 @@ def main():
                 fnc.create_vehicle()
                 option = fnc.select_another_option()
             case 2: 
-                pass 
+                vehicle = fnc.search_vehicle_by_ID()    
+                if vehicle:
+                    print(vehicle)
+                else:
+                    print("The vehicle was not found...")
                 option = fnc.select_another_option()
 
             case 3: 

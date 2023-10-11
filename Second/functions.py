@@ -19,7 +19,8 @@ def print_menu_information():
     print("4. Modify a vehicle")
     print("5. Show all vehicles")
     print("6. Save all vehicles information in a file")
-
+    print("7. Convert miles to kilometers")
+    
     print("\n0. Exit")
 
 def select_another_option():
@@ -31,11 +32,8 @@ def select_another_option():
         userAnswer = int(userAnswer)
     return userAnswer
 
-
-
-
 def create_vehicle():
-    print("\nCREATE A NEW VEHICLE...\n")
+    print("\n\tCREATING A NEW VEHICLE...\n")
     vehicleID = input("Please enter the ID of the vehicle: ")
     while not validate_ID(vehicleID):
         print("ERROR. The ID is already in use. Please enter another ID.")
@@ -49,3 +47,14 @@ def create_vehicle():
     vehicle = cls.Vehicle(vehicleID, brand, model, year)
     vehiclesList.append(vehicle)
     print("\nVehicle created successfully.\n")
+
+
+def search_vehicle_by_ID():
+    print("\n\tSEARCHING A VEHICLE...\n")
+    vehicleID = input("Please enter the ID of the vehicle: ")
+
+    for vehicle in vehiclesList:
+        if vehicle.get_vehicleID() == vehicleID:
+            return vehicle
+    
+    return None # If the vehicle is not found, then the function returns None
