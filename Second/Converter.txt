@@ -1,0 +1,2 @@
+1.0 miles = 1.60934 kilometers
+0.63 miles = 1.0138842 kilometers

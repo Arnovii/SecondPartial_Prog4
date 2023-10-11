@@ -1,8 +1,11 @@
 import os
 
 scriptPath = os.path.dirname(os.path.realpath(__file__))
-fileTextName = "Vehicles.txt"
-fileTextPath = os.path.join(scriptPath, fileTextName)
+fileTextVehicles = "Vehicles.txt"
+fileTextPath = os.path.join(scriptPath, fileTextVehicles)
+
+fileTextConverter = "Converter.txt"
+fileTextConverterPath = os.path.join(scriptPath, fileTextConverter)
 
 class Vehicle:
     def __init__(self, vehicleID, brand, model, year):

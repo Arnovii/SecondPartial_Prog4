@@ -2,11 +2,6 @@ import Classes as cls
 import functions as fnc
 
 def main():
-    if fnc.vehiclesList == []: # If the list is empty, then the information of the file Vehicles.txt is erased
-        with open(cls.fileTextPath, "w") as file:
-            file.write("")
-            print("The information of the file Vehicles.txt has been erased.\n")
-
     option = fnc.select_another_option()
 
     while option != 0:
@@ -23,17 +18,20 @@ def main():
                 option = fnc.select_another_option()
 
             case 3: 
-                pass 
+                fnc.modify_vehicle()
                 option = fnc.select_another_option()
             
             case 4:
-                pass 
+                fnc.show_all_vehicles_information()
                 option = fnc.select_another_option()
 
             case 5:
-                pass 
+                fnc.save_all_vehicles_information_in_a_file()
                 option = fnc.select_another_option()
 
+            case 6:
+                fnc.convert_miles_to_kilometers()
+                option = fnc.select_another_option()
             case _:
                 print("ERROR. The user input is not valid...")
                 option =  fnc.select_another_option()
