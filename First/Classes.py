@@ -1,10 +1,8 @@
 import os
 
 scriptPath = os.path.dirname(os.path.abspath(__file__))
-print(scriptPath)
 fileTextName = "Nutrition Clinic.txt"
 fileTextPath = os.path.join(scriptPath, fileTextName)
-print(fileTextPath)
 
 class Person: 
     def __init__(self, name, age, RUT, gender, wigth, higth):
